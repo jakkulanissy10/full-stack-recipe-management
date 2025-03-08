@@ -1,0 +1,98 @@
+.recipeContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+        gap: 10px;   
+} 
+
+.para{
+    color: white; 
+    text-align: center; 
+    font-size: 30px;
+} 
+
+.recipeCard {
+    border-radius: 25px; 
+    padding: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; /* Align content to top */
+    align-items: center; 
+    width: 250px; /* Fixed width for consistency */
+    height: 400px; /* Ensures minimum height */ /* Allows dynamic height */
+    margin: 12px;
+    overflow-y: scroll;
+}  
+
+.theme-toggle{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.light-mode .recipeCard{
+    border: 1px black solid !important; 
+} 
+
+.dark-mode .recipeCard{
+    border: 1px grey solid !important;
+   background-color: lightgrey;
+    
+}
+.dark-mode h1,h2,h3,p{
+    color: black;
+} 
+
+.light-mode h1,h2,h3,p{
+    color: gray;
+}
+.receipeCent{
+    border: 1px grey solid; 
+    border-radius: 25px; 
+    padding: 25px;
+    margin: 10px;
+} 
+.main-heading{
+    height: 30px; 
+    color: grey; 
+    font-weight: bold; 
+    width: 20px;
+}
+
+.addBtn{
+    margin-top: 40px; 
+    margin-bottom: 0px;
+    padding: 20px; 
+}
+
+.dark-mode{
+    background-color: black;
+} 
+
+.light-mode{
+    background-color: white;
+} 
+
+.dark-mode input{
+    background-color: transparent; 
+    border: 1px white solid; 
+    margin: 3px;
+} 
+
+.light-mode input{
+    margin: 3px;
+}
+
+.dark-mode button{
+    background-color: transparent; 
+    border: 1px white solid;
+    color: white;
+} 
+
+.light-mode button{
+    background-color: transparent; 
+    border: 1px gray solid;
+    color: black;
+} 
+
