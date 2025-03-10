@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 node_modules/
 .env
+<<<<<<< HEAD
 =======
 # Logs
 logs
@@ -27,3 +28,6 @@ dist-ssr
 *.sln
 *.sw?
 >>>>>>> eb9c039 (OA)
+=======
+.vercel
+>>>>>>> b4932c0 (Added backend logic for recipe management)

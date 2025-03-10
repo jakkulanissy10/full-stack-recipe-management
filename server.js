@@ -6,15 +6,19 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://frontend-b2101846n-jakkulanissy10s-projects.vercel.app'], // Allow both local and deployed frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
+  credentials: true // If using cookies/authentication
+}));
 
 const PORT = process.env.PORT || 3000;
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = process.env.DB_PASSWORD;
-const DB_NAME = process.env.DB_NAME;
+const DB_NAME = process.env.DB_NAME; 
 
 const dbUrl = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.nknbp.mongodb.net/${DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`;
-
+//connecting mongoose
 mongoose
   .connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected successfully"))
